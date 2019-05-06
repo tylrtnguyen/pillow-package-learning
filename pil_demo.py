@@ -8,7 +8,6 @@ def show_image():
         if image.endswith('.jpg'):
             image_to_show = Image.open(image)
             image_to_show.show()
-			pass
 
 
 # Change image extension
@@ -19,7 +18,6 @@ def change_extension():
             # Separate filename and extension
             fname, fext = os.path.splitext(f)
             image.save(f'pngs/{fname}.png')
-			pass
 
 
 # Resize image with thumbnail to keep aspect ratio
@@ -32,7 +30,6 @@ def image_thumbnail():
             output_size = (640, 640)
             image.thumbnail(output_size)
             image.save(f'resize_images/resized_{fname}{fext}')
-			pass
 
 
 # Copy an image on top of another image
@@ -43,7 +40,7 @@ def logo_on_image():
 	position = ((image_copy.width - logo.width),(image_copy.height-logo.height))
 	image_copy.paste(logo,position)
 	image_copy.save('leesin_with_logo.jpg')
-	pass
+
 
 
 show_image()
